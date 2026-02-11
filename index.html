@@ -2,145 +2,260 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mohamed Aly Niakh - CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Aly Niakh | Portfolio SISR</title>
 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar{
+  background: rgba(15,23,42,0.8);
+  backdrop-filter: blur(10px);
+}
+.navbar a{
+  color: white !important;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg,#0f172a,#1e3a8a);
+}
+
+.hero h1{
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.typing{
+  color: #38bdf8;
+  font-weight: bold;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30,end), blink .8s infinite;
+}
+
+@keyframes typing{
+  from{width:0}
+  to{width:100%}
+}
+
+@keyframes blink{
+  50%{border-color:transparent}
+}
+
+/* SECTIONS */
+.section{
+  padding: 100px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title h2{
+  font-weight:700;
+  color:#38bdf8;
+}
+
+/* GLASS CARD */
+.glass{
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 30px;
+  transition: 0.3s;
+}
+
+.glass:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* CV SECTION */
+.cv-section{
+  background: linear-gradient(135deg,#1e3a8a,#2563eb);
+  text-align:center;
+  padding:80px 0;
+}
+
+.cv-btn{
+  background:white;
+  color:#1e3a8a;
+  padding:15px 30px;
+  font-weight:bold;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.cv-btn:hover{
+  background:#0f172a;
+  color:white;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#0f172a;
+  font-size:14px;
+}
+</style>
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house"></i><span>Accueil</span></a></li>
-        <li><a href="#about"><i class="bi bi-person"></i><span>Profil</span></a></li>
-        <li><a href="#skills"><i class="bi bi-gear"></i><span>Compétences</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text"></i><span>Parcours</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand text-white fw-bold" href="#">M.A.N</a>
+<button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<li class="nav-item"><a class="nav-link text-info fw-bold" href="#cv">Mon CV</a></li>
+</ul>
+</div>
+</div>
+</nav>
 
-  <main class="main">
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>Mohamed Aly Niakh</h1>
+<p class="typing">Étudiant BTS SIO – Option SISR</p>
+<p class="mt-3">Futur Administrateur Systèmes & Réseaux</p>
+</div>
+</section>
 
-    <!-- HERO -->
-    <section id="hero" class="hero section light-background">
-      <div class="container text-center">
-        <h2>Mohamed Aly Niakh</h2>
-        <p>Étudiant en BTS SIO option SISR – Candidature pour un stage</p>
-      </div>
-    </section>
+<!-- ABOUT -->
+<section id="about" class="section container">
+<div class="section-title">
+<h2>À propos</h2>
+</div>
 
-    <!-- PROFIL -->
-    <section id="about" class="about section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Profil</h2>
-        </div>
+<div class="glass">
+<p>
+Actuellement étudiant en BTS Services Informatiques aux Organisations – option SISR,
+je développe des compétences en administration systèmes, réseaux et gestion d’infrastructures.
+</p>
+<p>
+Passionné par les technologies IT, la cybersécurité et les architectures réseaux,
+je recherche un stage afin de participer à des projets concrets
+et renforcer mes compétences professionnelles.
+</p>
+</div>
+</section>
 
-        <p>
-          Après l’obtention de mon baccalauréat professionnel en Modélisation et Prototypage 3D (MP3D),
-          j’ai poursuivi mes études en BTS Services Informatiques aux Organisations (SIO),
-          option SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
-        </p>
+<!-- SKILLS -->
+<section id="skills" class="section container">
+<div class="section-title">
+<h2>Compétences Techniques</h2>
+</div>
 
-        <p>
-          Passionné par l’informatique et les réseaux, je souhaite devenir administrateur systèmes et réseaux.
-          Je recherche un stage afin de développer mes compétences techniques et acquérir une expérience professionnelle.
-        </p>
+<div class="row g-4">
 
-        <div class="row mt-4">
-          <div class="col-lg-6">
-            <ul>
-              <li><strong>Email :</strong> niakhmoha07@gmail.com</li>
-              <li><strong>Téléphone :</strong> 06 22 18 36 05</li>
-              <li><strong>Date de naissance :</strong> 25/04/2007</li>
-              <li><strong>Ville :</strong> 8 square Francis Couperin, 77000 Melun</li>
-            </ul>
-          </div>
-          <div class="col-lg-6">
-            <ul>
-              <li><strong>Langues :</strong> Français, Wolof</li>
-              <li><strong>Italien :</strong> Intermédiaire</li>
-              <li><strong>Anglais :</strong> Niveau scolaire</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="col-md-4">
+<div class="glass">
+<h5>Réseaux</h5>
+<ul>
+<li>IPv4 / IPv6</li>
+<li>OSI & TCP/IP</li>
+<li>DHCP / DNS</li>
+<li>Routage statique</li>
+</ul>
+</div>
+</div>
 
-    <!-- COMPETENCES -->
-    <section id="skills" class="skills section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Compétences</h2>
-        </div>
+<div class="col-md-4">
+<div class="glass">
+<h5>Systèmes</h5>
+<ul>
+<li>Debian Server</li>
+<li>Ubuntu Desktop</li>
+<li>Gestion utilisateurs</li>
+<li>Virtualisation (notions)</li>
+</ul>
+</div>
+</div>
 
-        <ul>
-          <li>Adressage réseaux IPv4 et IPv6</li>
-          <li>Modèles en couches OSI et TCP/IP</li>
-          <li>Protocoles réseaux : DHCP, DNS</li>
-          <li>GNU/Linux : Debian Server, Ubuntu Desktop</li>
-          <li>Équipements réseaux HP et Cisco</li>
-          <li>Routage statique</li>
-        </ul>
-      </div>
-    </section>
+<div class="col-md-4">
+<div class="glass">
+<h5>Équipements</h5>
+<ul>
+<li>Cisco & HP</li>
+<li>VLAN</li>
+<li>Maintenance</li>
+<li>Sécurité réseau (bases)</li>
+</ul>
+</div>
+</div>
 
-    <!-- PARCOURS -->
-    <section id="resume" class="resume section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Parcours</h2>
-        </div>
+</div>
+</section>
 
-        <h4>Formation</h4>
-        <ul>
-          <li><strong>BTS SIO option SISR</strong> – Depuis septembre 2025  
-            Lycée Léonard de Vinci – Melun</li>
+<!-- PROJECTS -->
+<section id="projects" class="section container">
+<div class="section-title">
+<h2>Projets</h2>
+</div>
 
-          <li><strong>Bac Pro Modélisation et Prototypage 3D</strong> – 2024/2025  
-            Lycée Frédéric Joliot-Curie – Dammarie-les-Lys</li>
+<div class="glass">
+<ul>
+<li>Configuration réseau complet sous Packet Tracer</li>
+<li>Mise en place serveur Debian (DHCP / DNS)</li>
+<li>Création d’un réseau local avec segmentation VLAN</li>
+<li>Gestion utilisateurs & permissions Linux</li>
+</ul>
+</div>
+</section>
 
-          <li><strong>Certification PIX</strong> – 2024/2025</li>
+<!-- CV -->
+<section id="cv" class="cv-section">
+<h2>Mon CV</h2>
+<p>Téléchargez mon CV professionnel en cliquant ci-dessous</p>
+<a href="assets/cv/Mohamed_Aly_Niakh_CV.pdf" target="_blank" class="cv-btn">
+<i class="bi bi-download"></i> Télécharger mon CV
+</a>
+</section>
 
-          <li><strong>Brevet des collèges</strong> – 2021/2022  
-            Collège Jacques Amyot – Melun</li>
-        </ul>
+<!-- CONTACT -->
+<section id="contact" class="section container text-center">
+<div class="section-title">
+<h2>Contact</h2>
+</div>
+<p><i class="bi bi-envelope"></i> niakhmoha07@gmail.com</p>
+<p><i class="bi bi-telephone"></i> 06 22 18 36 05</p>
+<p><i class="bi bi-geo-alt"></i> Melun – 77000</p>
+</section>
 
-        <h4 class="mt-4">Expériences professionnelles</h4>
-        <ul>
-          <li><strong>Stagiaire – Leduc SA (Melun)</strong> – 2024/2025</li>
-          <li><strong>Stagiaire – Quick Habitat (Melun)</strong> – 2023/2024</li>
-          <li><strong>Stagiaire – Leduc SA (Melun)</strong> – 2022/2023</li>
-        </ul>
+<footer>
+© 2026 Mohamed Aly Niakh – Portfolio Professionnel SISR
+</footer>
 
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-
-        <p>Email : niakhmoha07@gmail.com</p>
-        <p>Téléphone : 06 22 18 36 05</p>
-        <p>Adresse : 8 square Francis Couperin, 77000 Melun</p>
-      </div>
-    </section>
-
-  </main>
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
