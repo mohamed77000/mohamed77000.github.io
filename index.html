@@ -2,408 +2,218 @@
 <html lang="fr">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mohamed Aly Niakh | Portfolio SISR</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Aly Niakh | BTS SIO SISR</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
-    color: white;
-    scroll-behavior: smooth;
-  }
-
-  /* NAVBAR */
-  .navbar {
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(10px);
-  }
-
-  .navbar a {
-    color: white !important;
-    font-weight: 500;
-  }
-
-  /* HERO */
-  .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-  }
-
-  .typing {
-    color: #38bdf8;
-    font-weight: bold;
-    border-right: 2px solid white;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(30, end), blink 0.8s infinite;
-  }
-
-  @keyframes typing {
-    from {
-      width: 0
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    to {
-      width: 100%
-    }
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
-  }
-
-  /* SECTIONS */
-  .section {
-    padding: 100px 0;
-  }
-
-  .section-title {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-
-  .section-title h2 {
-    font-weight: 700;
-    color: #38bdf8;
-  }
-
-  /* GLASS CARD */
-  .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    border-radius: 15px;
-    padding: 30px;
-    transition: 0.3s;
-  }
-
-  .glass:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  }
-
-  /* CV SECTION */
-  .cv-section {
-    background: linear-gradient(135deg, #1e3a8a, #2563eb);
-    text-align: center;
-    padding: 80px 0;
-  }
-
-  .cv-btn {
-    background: white;
-    color: #1e3a8a;
-    padding: 15px 40px;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 1.1rem;
-  }
-
-  .cv-btn:hover {
-    background: #0f172a;
-    color: white;
-  }
-
-  /* SIDEBAR */
-  #sidebar {
-    position: fixed;
-    top: 80px;
-    left: 20px;
-    width: 280px;
-    background: rgba(15, 23, 42, 0.9);
-    padding: 20px;
-    border-radius: 15px;
-    height: calc(100vh - 100px);
-    overflow-y: auto;
-  }
-
-  #sidebar h4 {
-    border-bottom: 1px solid #38bdf8;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #38bdf8;
-  }
-
-  #sidebar .contact-info,
-  #sidebar .languages,
-  #sidebar .skills,
-  #sidebar .interests {
-    margin-bottom: 25px;
-  }
-
-  #sidebar .progress {
-    height: 6px;
-  }
-
-  /* LANGUAGES */
-  .language-label {
-    font-weight: 600;
-    margin-top: 10px;
-  }
-
-  /* ATTESTS / SOFT SKILLS */
-  #sidebar ul {
-    padding-left: 1rem;
-    list-style-type: disc;
-  }
-
-  /* MAIN CONTENT */
-  #main-content {
-    margin-left: 320px;
-    padding: 0 40px 100px 40px;
-  }
-
-  /* LINKS */
-  a {
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: #0f172a;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  /* Responsive */
-  @media (max-width: 992px) {
-    #sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
-      margin-bottom: 30px;
+    .hero {
+      background: linear-gradient(135deg, #0d6efd, #001f3f);
+      color: white;
+      padding: 100px 0;
     }
 
-    #main-content {
-      margin-left: 0;
-      padding: 0 20px 50px 20px;
+    .section-title {
+      margin-bottom: 40px;
+      text-align: center;
     }
-  }
-</style>
+
+    .section-title h2 {
+      font-weight: bold;
+      color: #0d6efd;
+    }
+
+    .skill-bar {
+      background: #e9ecef;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .skill-bar-fill {
+      height: 10px;
+      background: #0d6efd;
+    }
+
+    footer {
+      background: #001f3f;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand text-white fw-bold" href="#">M.A.N</a>
-    <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <a class="navbar-brand" href="#">Mohamed Aly Niakh</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navMenu">
+
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
         <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
-        <li class="nav-item"><a class="nav-link" href="#formations">Formations</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experiences">Expériences</a></li>
-        <li class="nav-item"><a class="nav-link text-info fw-bold" href="#cv">Mon CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
+        <li class="nav-item"><a class="nav-link" href="#langues">Langues</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="#cv">Mon CV</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- SIDEBAR -->
-<div id="sidebar">
-  <div class="contact-info">
-    <h4>Contact</h4>
-    <p><i class="bi bi-envelope"></i> niakhmoha07@gmail.com</p>
-    <p><i class="bi bi-geo-alt"></i> 8 square Francois Couperin, 77000 Melun</p>
-    <p><i class="bi bi-calendar"></i> Né le 25/04/2007</p>
-    <p><i class="bi bi-geo-alt-fill"></i> Île-de-France</p>
-    <p><i class="bi bi-telephone"></i> 06 22 18 36 05</p>
+<!-- HERO -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Mohamed Aly Niakh</h1>
+    <p class="lead">Étudiant en BTS SIO – Option SISR</p>
+    <p>Candidature pour un stage en administration systèmes et réseaux</p>
   </div>
+</section>
 
-  <div class="languages">
-    <h4>Langues</h4>
-    <div>
-      <div class="language-label">Français</div>
-      <div class="progress bg-secondary">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
+<!-- PROFIL -->
+<section id="profil" class="container py-5">
+  <div class="section-title">
+    <h2>Profil</h2>
+  </div>
+  <p>
+    Titulaire d’un Bac Professionnel Modélisation et Prototypage 3D (MP3D),
+    je poursuis actuellement un BTS Services Informatiques aux Organisations,
+    option SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
+  </p>
+  <p>
+    Passionné par l’informatique et les technologies réseaux, je souhaite évoluer vers
+    un poste d’administrateur systèmes et réseaux. Sérieux, motivé et rigoureux,
+    je recherche un stage afin de renforcer mes compétences techniques
+    et acquérir une expérience professionnelle solide.
+  </p>
+</section>
 
-      <div class="language-label">Wolof</div>
-      <div class="progress bg-secondary">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
-
-      <div class="language-label">Italien</div>
-      <div class="progress bg-secondary">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
-
-      <div class="language-label">Anglais</div>
-      <div class="progress bg-secondary">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
+<!-- COMPETENCES -->
+<section id="competences" class="bg-light py-5">
+  <div class="container">
+    <div class="section-title">
+      <h2>Compétences Techniques</h2>
     </div>
+
+    <p><strong>Adressage IPv4 / IPv6</strong></p>
+    <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%"></div></div>
+
+    <p><strong>Modèle OSI & TCP/IP</strong></p>
+    <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%"></div></div>
+
+    <p><strong>DHCP / DNS</strong></p>
+    <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%"></div></div>
+
+    <p><strong>GNU/Linux (Debian Server, Ubuntu)</strong></p>
+    <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%"></div></div>
+
+    <p><strong>Équipements Cisco & HP</strong></p>
+    <div class="skill-bar"><div class="skill-bar-fill" style="width: 65%"></div></div>
+
+    <p><strong>Routage Statique</strong></p>
+    <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%"></div></div>
+
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section id="parcours" class="container py-5">
+  <div class="section-title">
+    <h2>Parcours Académique & Professionnel</h2>
   </div>
 
-  <div class="skills">
-    <h4>Atouts</h4>
+  <h4>🎓 Formation</h4>
+  <ul>
+    <li><strong>BTS SIO option SISR</strong> – Depuis 2025  
+      Lycée Léonard de Vinci – Melun</li>
+    <li><strong>Bac Pro MP3D</strong> – 2024/2025  
+      Lycée Frédéric Joliot-Curie</li>
+    <li><strong>Certification PIX</strong></li>
+    <li><strong>Brevet des collèges</strong> – Collège Jacques Amyot</li>
+  </ul>
+
+  <h4 class="mt-4">💼 Expériences Professionnelles</h4>
+  <ul>
+    <li><strong>Leduc SA – Stagiaire (2024-2025)</strong><br>
+      Découverte du fonctionnement interne d’une entreprise et participation aux activités techniques.</li>
+
+    <li><strong>Quick Habitat – Stagiaire (2023-2024)</strong><br>
+      Travail en autonomie, respect des délais et intégration au sein d’une équipe professionnelle.</li>
+
+    <li><strong>Leduc SA – Stagiaire (2022-2023)</strong><br>
+      Observation des processus professionnels et développement du sens des responsabilités.</li>
+  </ul>
+</section>
+
+<!-- LANGUES -->
+<section id="langues" class="bg-light py-5">
+  <div class="container">
+    <div class="section-title">
+      <h2>Langues & Atouts</h2>
+    </div>
+
+    <ul>
+      <li>Français : Courant</li>
+      <li>Wolof : Courant</li>
+      <li>Italien : Intermédiaire</li>
+      <li>Anglais : Niveau scolaire</li>
+    </ul>
+
+    <h5 class="mt-4">Atouts :</h5>
     <ul>
       <li>Sociable</li>
-      <li>Esprit d'équipe</li>
-      <li>Sens de l'organisation</li>
-      <li>Un autre atout (utilisez votre personnalité pour le mettre en avant)</li>
+      <li>Esprit d’équipe</li>
+      <li>Sens de l’organisation</li>
+      <li>Motivé et sérieux</li>
     </ul>
   </div>
+</section>
 
-  <div class="interests">
-    <h4>Centres d'intérêt</h4>
-    <ul>
-      <li>Sport</li>
-      <li>Jeux vidéo</li>
-      <li>Musique</li>
-    </ul>
-  </div>
-</div>
-
-<!-- MAIN CONTENT -->
-<div id="main-content" class="container-fluid">
-  
-  <!-- HERO -->
-  <section class="hero mb-5">
-    <div>
-      <h1>Mohamed Aly Niakh</h1>
-      <p class="typing">Étudiant BTS SIO – Option SISR</p>
-      <p class="mt-3">Futur Administrateur Systèmes & Réseaux</p>
-    </div>
-  </section>
-
-  <!-- COMPETENCES -->
-  <section id="competences" class="section">
-    <div class="section-title">
-      <h2>Compétences</h2>
-    </div>
-
-    <div class="glass">
-      <p><strong>Adressages réseaux IPv4 et IPv6</strong> – Modèles en couches (OSI et TCP/IP)</p>
-      <p><strong>Fonctionnement côté client de protocoles réseaux de base</strong> (DHCP et DNS)</p>
-      <p><strong>Systèmes d'exploitation :</strong> GNU/Linux (debian server / ubuntu desktop)</p>
-      <p><strong>HP et CISCO</strong></p>
-      <p><strong>Routage statique</strong></p>
-    </div>
-  </section>
-
-  <!-- FORMATIONS -->
-  <section id="formations" class="section">
-    <div class="section-title">
-      <h2>Diplômes et Formations</h2>
-    </div>
-
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item bg-transparent border-secondary">
-        <strong>BTS SIO</strong><br />
-        <small>Depuis septembre 2025</small><br />
-        <a href="https://lycee-leonard-de-vinci-melun.fr" target="_blank" class="link-info">
-          Lycée Polyvalent Leonard de Vinci – Melun
-        </a>
-      </li>
-      <li class="list-group-item bg-transparent border-secondary">
-        <strong>Bac pro Modalisation et prototypage 3D</strong><br />
-        <small>De 2024 à 2025</small><br />
-        <a href="https://lycee-frédéric-joliot-curie.fr" target="_blank" class="link-info">
-          Lycée polyvalent Frédéric Joliot Curie – Dammarie-les-Lys
-        </a>
-      </li>
-      <li class="list-group-item bg-transparent border-secondary">
-        <strong>Certification PIX</strong><br />
-        <small>De 2024 à 2025</small><br />
-        <a href="https://lycee-frédéric-joliot-curie.fr" target="_blank" class="link-info">
-          Lycée Polyvalent Frédéric Joliot Curie – Dammarie-les-Lys
-        </a>
-      </li>
-      <li class="list-group-item bg-transparent border-secondary">
-        <strong>Brevet des collèges</strong><br />
-        <small>De 2021 à 2022</small><br />
-        <a href="https://college-jacques-amyot.fr" target="_blank" class="link-info">
-          Collège Jacques Amyot – Melun
-        </a>
-      </li>
-    </ul>
-  </section>
-
-  <!-- EXPERIENCES -->
-  <section id="experiences" class="section">
-    <div class="section-title">
-      <h2>Expériences professionnelles</h2>
-    </div>
-
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item bg-transparent border-secondary">
-        <strong>Stagiaire</strong><br />
-        <small>De 2024 à 2025</small><br />
-        <a href="https://www.leduc-sa.fr" target="_blank" class="link-info">Leduc SA – Melun</a>
-      </li>
-      <li class="list-group-item bg-transparent border-secondary">
-        <strong>Stagiaire</strong><br />
-        <small>De 2023 à 2024</small><br />
-        <a href="https://www.quickhabitat.fr" target="_blank" class="link-info">Quick habitat – Melun</a>
-      </li>
-      <li class="list-group-item bg-transparent border-secondary">
-        <strong>Stagiaire</strong><br />
-        <small>De 2022 à 2023</small><br />
-        <a href="https://www.leduc-sa.fr" target="_blank" class="link-info">Leduc SA – Melun</a>
-      </li>
-    </ul>
-  </section>
-
-  <!-- CV -->
-  <section id="cv" class="cv-section">
+<!-- MON CV -->
+<section id="cv" class="container py-5 text-center">
+  <div class="section-title">
     <h2>Mon CV</h2>
-    <p>Téléchargez mon CV professionnel en cliquant ci-dessous</p>
-    <a href="assets/cv/Mohamed_Aly_Niakh_CV.pdf" target="_blank" class="cv-btn">
-      <i class="bi bi-download"></i> Télécharger mon CV
-    </a>
-  </section>
+  </div>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section text-center">
-    <div class="section-title">
-      <h2>Contact</h2>
-    </div>
-    <p><i class="bi bi-envelope"></i> niakhmoha07@gmail.com</p>
-    <p><i class="bi bi-telephone"></i> 06 22 18 36 05</p>
-    <p><i class="bi bi-geo-alt"></i> 8 square Francois Couperin, 77000 Melun, Île-de-France</p>
-  </section>
-</div>
+  <p>Vous pouvez télécharger mon CV au format PDF en cliquant sur le bouton ci-dessous :</p>
+
+  <a href="assets/cv/Mohamed_Aly_Niakh_CV.pdf" class="btn btn-primary btn-lg" target="_blank">
+    <i class="bi bi-download"></i> Télécharger mon CV
+  </a>
+
+  <p class="mt-3 text-muted">
+    (Place ton fichier PDF dans le dossier : assets/cv/)
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-dark text-white py-5">
+  <div class="container text-center">
+    <h2>Contact</h2>
+    <p>Email : niakhmoha07@gmail.com</p>
+    <p>Téléphone : 06 22 18 36 05</p>
+    <p>Adresse : 8 square Francis Couperin – 77000 Melun</p>
+  </div>
+</section>
 
 <footer>
-  © 2026 Mohamed Aly Niakh – Portfolio Professionnel SISR
+  © 2026 Mohamed Aly Niakh – Tous droits réservés
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
