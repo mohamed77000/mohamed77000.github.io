@@ -2,218 +2,260 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohamed Aly Niakh | BTS SIO SISR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Aly Niakh | Portfolio SISR</title>
 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-    }
+<style>
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: white;
+  scroll-behavior: smooth;
+}
 
-    .hero {
-      background: linear-gradient(135deg, #0d6efd, #001f3f);
-      color: white;
-      padding: 100px 0;
-    }
+/* NAVBAR */
+.navbar{
+  background: rgba(15,23,42,0.8);
+  backdrop-filter: blur(10px);
+}
+.navbar a{
+  color: white !important;
+  font-weight: 500;
+}
 
-    .section-title {
-      margin-bottom: 40px;
-      text-align: center;
-    }
+/* HERO */
+.hero{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg,#0f172a,#1e3a8a);
+}
 
-    .section-title h2 {
-      font-weight: bold;
-      color: #0d6efd;
-    }
+.hero h1{
+  font-size: 3rem;
+  font-weight: 700;
+}
 
-    .skill-bar {
-      background: #e9ecef;
-      border-radius: 20px;
-      overflow: hidden;
-      margin-bottom: 15px;
-    }
+.typing{
+  color: #38bdf8;
+  font-weight: bold;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30,end), blink .8s infinite;
+}
 
-    .skill-bar-fill {
-      height: 10px;
-      background: #0d6efd;
-    }
+@keyframes typing{
+  from{width:0}
+  to{width:100%}
+}
 
-    footer {
-      background: #001f3f;
-      color: white;
-      padding: 30px 0;
-      text-align: center;
-    }
-  </style>
+@keyframes blink{
+  50%{border-color:transparent}
+}
+
+/* SECTIONS */
+.section{
+  padding: 100px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title h2{
+  font-weight:700;
+  color:#38bdf8;
+}
+
+/* GLASS CARD */
+.glass{
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 30px;
+  transition: 0.3s;
+}
+
+.glass:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* CV SECTION */
+.cv-section{
+  background: linear-gradient(135deg,#1e3a8a,#2563eb);
+  text-align:center;
+  padding:80px 0;
+}
+
+.cv-btn{
+  background:white;
+  color:#1e3a8a;
+  padding:15px 30px;
+  font-weight:bold;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.cv-btn:hover{
+  background:#0f172a;
+  color:white;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#0f172a;
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Mohamed Aly Niakh</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
-        <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
-        <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
-        <li class="nav-item"><a class="nav-link" href="#langues">Langues</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="#cv">Mon CV</a></li>
-      </ul>
-    </div>
-  </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand text-white fw-bold" href="#">M.A.N</a>
+<button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<li class="nav-item"><a class="nav-link text-info fw-bold" href="#cv">Mon CV</a></li>
+</ul>
+</div>
+</div>
 </nav>
 
 <!-- HERO -->
-<section class="hero text-center">
-  <div class="container">
-    <h1 class="display-4 fw-bold">Mohamed Aly Niakh</h1>
-    <p class="lead">Étudiant en BTS SIO – Option SISR</p>
-    <p>Candidature pour un stage en administration systèmes et réseaux</p>
-  </div>
+<section class="hero">
+<div>
+<h1>Mohamed Aly Niakh</h1>
+<p class="typing">Étudiant BTS SIO – Option SISR</p>
+<p class="mt-3">Futur Administrateur Systèmes & Réseaux</p>
+</div>
 </section>
 
-<!-- PROFIL -->
-<section id="profil" class="container py-5">
-  <div class="section-title">
-    <h2>Profil</h2>
-  </div>
-  <p>
-    Titulaire d’un Bac Professionnel Modélisation et Prototypage 3D (MP3D),
-    je poursuis actuellement un BTS Services Informatiques aux Organisations,
-    option SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
-  </p>
-  <p>
-    Passionné par l’informatique et les technologies réseaux, je souhaite évoluer vers
-    un poste d’administrateur systèmes et réseaux. Sérieux, motivé et rigoureux,
-    je recherche un stage afin de renforcer mes compétences techniques
-    et acquérir une expérience professionnelle solide.
-  </p>
+<!-- ABOUT -->
+<section id="about" class="section container">
+<div class="section-title">
+<h2>À propos</h2>
+</div>
+
+<div class="glass">
+<p>
+Actuellement étudiant en BTS Services Informatiques aux Organisations – option SISR,
+je développe des compétences en administration systèmes, réseaux et gestion d’infrastructures.
+</p>
+<p>
+Passionné par les technologies IT, la cybersécurité et les architectures réseaux,
+je recherche un stage afin de participer à des projets concrets
+et renforcer mes compétences professionnelles.
+</p>
+</div>
 </section>
 
-<!-- COMPETENCES -->
-<section id="competences" class="bg-light py-5">
-  <div class="container">
-    <div class="section-title">
-      <h2>Compétences Techniques</h2>
-    </div>
+<!-- SKILLS -->
+<section id="skills" class="section container">
+<div class="section-title">
+<h2>Compétences Techniques</h2>
+</div>
 
-    <p><strong>Adressage IPv4 / IPv6</strong></p>
-    <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%"></div></div>
+<div class="row g-4">
 
-    <p><strong>Modèle OSI & TCP/IP</strong></p>
-    <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%"></div></div>
+<div class="col-md-4">
+<div class="glass">
+<h5>Réseaux</h5>
+<ul>
+<li>IPv4 / IPv6</li>
+<li>OSI & TCP/IP</li>
+<li>DHCP / DNS</li>
+<li>Routage statique</li>
+</ul>
+</div>
+</div>
 
-    <p><strong>DHCP / DNS</strong></p>
-    <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%"></div></div>
+<div class="col-md-4">
+<div class="glass">
+<h5>Systèmes</h5>
+<ul>
+<li>Debian Server</li>
+<li>Ubuntu Desktop</li>
+<li>Gestion utilisateurs</li>
+<li>Virtualisation (notions)</li>
+</ul>
+</div>
+</div>
 
-    <p><strong>GNU/Linux (Debian Server, Ubuntu)</strong></p>
-    <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%"></div></div>
+<div class="col-md-4">
+<div class="glass">
+<h5>Équipements</h5>
+<ul>
+<li>Cisco & HP</li>
+<li>VLAN</li>
+<li>Maintenance</li>
+<li>Sécurité réseau (bases)</li>
+</ul>
+</div>
+</div>
 
-    <p><strong>Équipements Cisco & HP</strong></p>
-    <div class="skill-bar"><div class="skill-bar-fill" style="width: 65%"></div></div>
-
-    <p><strong>Routage Statique</strong></p>
-    <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%"></div></div>
-
-  </div>
+</div>
 </section>
 
-<!-- PARCOURS -->
-<section id="parcours" class="container py-5">
-  <div class="section-title">
-    <h2>Parcours Académique & Professionnel</h2>
-  </div>
+<!-- PROJECTS -->
+<section id="projects" class="section container">
+<div class="section-title">
+<h2>Projets</h2>
+</div>
 
-  <h4>🎓 Formation</h4>
-  <ul>
-    <li><strong>BTS SIO option SISR</strong> – Depuis 2025  
-      Lycée Léonard de Vinci – Melun</li>
-    <li><strong>Bac Pro MP3D</strong> – 2024/2025  
-      Lycée Frédéric Joliot-Curie</li>
-    <li><strong>Certification PIX</strong></li>
-    <li><strong>Brevet des collèges</strong> – Collège Jacques Amyot</li>
-  </ul>
-
-  <h4 class="mt-4">💼 Expériences Professionnelles</h4>
-  <ul>
-    <li><strong>Leduc SA – Stagiaire (2024-2025)</strong><br>
-      Découverte du fonctionnement interne d’une entreprise et participation aux activités techniques.</li>
-
-    <li><strong>Quick Habitat – Stagiaire (2023-2024)</strong><br>
-      Travail en autonomie, respect des délais et intégration au sein d’une équipe professionnelle.</li>
-
-    <li><strong>Leduc SA – Stagiaire (2022-2023)</strong><br>
-      Observation des processus professionnels et développement du sens des responsabilités.</li>
-  </ul>
+<div class="glass">
+<ul>
+<li>Configuration réseau complet sous Packet Tracer</li>
+<li>Mise en place serveur Debian (DHCP / DNS)</li>
+<li>Création d’un réseau local avec segmentation VLAN</li>
+<li>Gestion utilisateurs & permissions Linux</li>
+</ul>
+</div>
 </section>
 
-<!-- LANGUES -->
-<section id="langues" class="bg-light py-5">
-  <div class="container">
-    <div class="section-title">
-      <h2>Langues & Atouts</h2>
-    </div>
-
-    <ul>
-      <li>Français : Courant</li>
-      <li>Wolof : Courant</li>
-      <li>Italien : Intermédiaire</li>
-      <li>Anglais : Niveau scolaire</li>
-    </ul>
-
-    <h5 class="mt-4">Atouts :</h5>
-    <ul>
-      <li>Sociable</li>
-      <li>Esprit d’équipe</li>
-      <li>Sens de l’organisation</li>
-      <li>Motivé et sérieux</li>
-    </ul>
-  </div>
-</section>
-
-<!-- MON CV -->
-<section id="cv" class="container py-5 text-center">
-  <div class="section-title">
-    <h2>Mon CV</h2>
-  </div>
-
-  <p>Vous pouvez télécharger mon CV au format PDF en cliquant sur le bouton ci-dessous :</p>
-
-  <a href="assets/cv/Mohamed_Aly_Niakh_CV.pdf" class="btn btn-primary btn-lg" target="_blank">
-    <i class="bi bi-download"></i> Télécharger mon CV
-  </a>
-
-  <p class="mt-3 text-muted">
-    (Place ton fichier PDF dans le dossier : assets/cv/)
-  </p>
+<!-- CV -->
+<section id="cv" class="cv-section">
+<h2>Mon CV</h2>
+<p>Téléchargez mon CV professionnel en cliquant ci-dessous</p>
+<a href="assets/cv/Mohamed_Aly_Niakh_CV.pdf" target="_blank" class="cv-btn">
+<i class="bi bi-download"></i> Télécharger mon CV
+</a>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="bg-dark text-white py-5">
-  <div class="container text-center">
-    <h2>Contact</h2>
-    <p>Email : niakhmoha07@gmail.com</p>
-    <p>Téléphone : 06 22 18 36 05</p>
-    <p>Adresse : 8 square Francis Couperin – 77000 Melun</p>
-  </div>
+<section id="contact" class="section container text-center">
+<div class="section-title">
+<h2>Contact</h2>
+</div>
+<p><i class="bi bi-envelope"></i> niakhmoha07@gmail.com</p>
+<p><i class="bi bi-telephone"></i> 06 22 18 36 05</p>
+<p><i class="bi bi-geo-alt"></i> Melun – 77000</p>
 </section>
 
 <footer>
-  © 2026 Mohamed Aly Niakh – Tous droits réservés
+© 2026 Mohamed Aly Niakh – Portfolio Professionnel SISR
 </footer>
 
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
