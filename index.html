@@ -1,218 +1,409 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Mohamed Aly Niakh - CV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mohamed Aly Niakh | Portfolio SISR</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f9;
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+    scroll-behavior: smooth;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar a {
+    color: white !important;
+    font-weight: 500;
+  }
+
+  /* HERO */
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .typing {
+    color: #38bdf8;
+    font-weight: bold;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end), blink 0.8s infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0
     }
 
-    /* SIDEBAR */
-    .sidebar {
-      background: #2f343a;
-      color: white;
-      min-height: 100vh;
-      padding: 30px 20px;
+    to {
+      width: 100%
     }
+  }
 
-    .sidebar h5 {
-      margin-top: 30px;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 14px;
-      letter-spacing: 1px;
+  @keyframes blink {
+    50% {
+      border-color: transparent
     }
+  }
 
-    .sidebar p {
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
+  /* SECTIONS */
+  .section {
+    padding: 100px 0;
+  }
 
-    .progress {
-      height: 6px;
-      background: #555;
-      margin-bottom: 15px;
-    }
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 
-    .progress-bar {
-      background: #0d6efd;
-    }
+  .section-title h2 {
+    font-weight: 700;
+    color: #38bdf8;
+  }
 
-    /* MAIN CONTENT */
-    .main-content {
-      padding: 40px;
-      background: white;
-      min-height: 100vh;
-    }
+  /* GLASS CARD */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+  }
 
-    h1 {
-      font-weight: bold;
-    }
+  .glass:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
 
-    .subtitle {
-      color: #0d6efd;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
+  /* CV SECTION */
+  .cv-section {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    text-align: center;
+    padding: 80px 0;
+  }
 
-    .section-title {
-      color: #0d6efd;
-      font-weight: bold;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
+  .cv-btn {
+    background: white;
+    color: #1e3a8a;
+    padding: 15px 40px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.1rem;
+  }
 
-    ul.timeline {
-      list-style: none;
-      padding-left: 20px;
-      border-left: 2px solid #ddd;
-    }
+  .cv-btn:hover {
+    background: #0f172a;
+    color: white;
+  }
 
-    ul.timeline li {
-      margin-bottom: 20px;
+  /* SIDEBAR */
+  #sidebar {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    width: 280px;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+
+  #sidebar h4 {
+    border-bottom: 1px solid #38bdf8;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #38bdf8;
+  }
+
+  #sidebar .contact-info,
+  #sidebar .languages,
+  #sidebar .skills,
+  #sidebar .interests {
+    margin-bottom: 25px;
+  }
+
+  #sidebar .progress {
+    height: 6px;
+  }
+
+  /* LANGUAGES */
+  .language-label {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  /* ATTESTS / SOFT SKILLS */
+  #sidebar ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+  }
+
+  /* MAIN CONTENT */
+  #main-content {
+    margin-left: 320px;
+    padding: 0 40px 100px 40px;
+  }
+
+  /* LINKS */
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    #sidebar {
       position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
     }
 
-    ul.timeline li::before {
-      content: "";
-      position: absolute;
-      left: -9px;
-      top: 5px;
-      width: 12px;
-      height: 12px;
-      background: #0d6efd;
-      border-radius: 50%;
+    #main-content {
+      margin-left: 0;
+      padding: 0 20px 50px 20px;
     }
-
-    .cv-button {
-      margin-top: 30px;
-    }
-
-  </style>
+  }
+</style>
 </head>
 
 <body>
 
-<div class="container-fluid">
-  <div class="row">
-
-    <!-- SIDEBAR -->
-    <div class="col-md-4 col-lg-3 sidebar">
-
-      <p>📧 niakhmoha07@gmail.com</p>
-      <p>📍 8 square Francis Couperin<br>77000 Melun</p>
-      <p>🎂 Né le 25/04/2007</p>
-      <p>📞 06 22 18 36 05</p>
-
-      <h5>Langues</h5>
-
-      <p>Français</p>
-      <div class="progress"><div class="progress-bar" style="width:100%"></div></div>
-
-      <p>Wolof</p>
-      <div class="progress"><div class="progress-bar" style="width:100%"></div></div>
-
-      <p>Italien</p>
-      <div class="progress"><div class="progress-bar" style="width:60%"></div></div>
-
-      <p>Anglais</p>
-      <div class="progress"><div class="progress-bar" style="width:50%"></div></div>
-
-      <h5>Atouts</h5>
-      <p>Sociable</p>
-      <p>Esprit d’équipe</p>
-      <p>Sens de l’organisation</p>
-
-      <h5>Centres d’intérêt</h5>
-      <p>Sport</p>
-      <p>Jeux vidéo</p>
-      <p>Musique</p>
-
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white fw-bold" href="#">M.A.N</a>
+    <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link" href="#formations">Formations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experiences">Expériences</a></li>
+        <li class="nav-item"><a class="nav-link text-info fw-bold" href="#cv">Mon CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <!-- MAIN CONTENT -->
-    <div class="col-md-8 col-lg-9 main-content">
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <div class="contact-info">
+    <h4>Contact</h4>
+    <p><i class="bi bi-envelope"></i> niakhmoha07@gmail.com</p>
+    <p><i class="bi bi-geo-alt"></i> 8 square Francois Couperin, 77000 Melun</p>
+    <p><i class="bi bi-calendar"></i> Né le 25/04/2007</p>
+    <p><i class="bi bi-geo-alt-fill"></i> Île-de-France</p>
+    <p><i class="bi bi-telephone"></i> 06 22 18 36 05</p>
+  </div>
 
-      <h1>Mohamed Aly Niakh</h1>
-      <p class="subtitle">Candidature pour un stage en SISR</p>
-
-      <p>
-        Après avoir obtenu mon bac professionnel en Modélisation et Prototypage 3D (MP3D),
-        j’ai poursuivi mes études en BTS Services Informatiques aux Organisations (SIO)
-        afin de devenir administrateur systèmes et réseaux.
-      </p>
-
-      <!-- COMPETENCES -->
-      <h4 class="section-title">Compétences</h4>
-
-      <p><strong>Adressage réseaux IPv4 et IPv6 – Modèles OSI & TCP/IP</strong></p>
-      <p><strong>Protocoles réseaux :</strong> DHCP, DNS</p>
-      <p><strong>Systèmes :</strong> GNU/Linux (Debian Server, Ubuntu Desktop)</p>
-      <p><strong>Équipements :</strong> HP & Cisco</p>
-      <p><strong>Routage statique</strong></p>
-
-      <!-- DIPLOMES -->
-      <h4 class="section-title">Diplômes et Formations</h4>
-
-      <ul class="timeline">
-        <li>
-          <strong>BTS SIO</strong><br>
-          Depuis septembre 2025 – Lycée Léonard de Vinci, Melun
-        </li>
-
-        <li>
-          <strong>Bac Pro Modélisation et Prototypage 3D</strong><br>
-          2024 à 2025 – Lycée Frédéric Joliot Curie
-        </li>
-
-        <li>
-          <strong>Certification PIX</strong><br>
-          2024 à 2025
-        </li>
-
-        <li>
-          <strong>Brevet des collèges</strong><br>
-          2021 à 2022 – Collège Jacques Amyot
-        </li>
-      </ul>
-
-      <!-- EXPERIENCES -->
-      <h4 class="section-title">Expériences professionnelles</h4>
-
-      <ul class="timeline">
-        <li>
-          <strong>Stagiaire – Leduc SA</strong><br>
-          2024 à 2025 – Melun
-        </li>
-
-        <li>
-          <strong>Stagiaire – Quick Habitat</strong><br>
-          2023 à 2024 – Melun
-        </li>
-
-        <li>
-          <strong>Stagiaire – Leduc SA</strong><br>
-          2022 à 2023 – Melun
-        </li>
-      </ul>
-
-      <!-- MON CV -->
-      <div class="cv-button">
-        <a href="assets/cv/Mohamed_Aly_Niakh_CV.pdf" class="btn btn-primary" target="_blank">
-          Télécharger mon CV
-        </a>
+  <div class="languages">
+    <h4>Langues</h4>
+    <div>
+      <div class="language-label">Français</div>
+      <div class="progress bg-secondary">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+          aria-valuemax="100"></div>
       </div>
 
+      <div class="language-label">Wolof</div>
+      <div class="progress bg-secondary">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+          aria-valuemax="100"></div>
+      </div>
+
+      <div class="language-label">Italien</div>
+      <div class="progress bg-secondary">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
+          aria-valuemax="100"></div>
+      </div>
+
+      <div class="language-label">Anglais</div>
+      <div class="progress bg-secondary">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
+          aria-valuemax="100"></div>
+      </div>
     </div>
+  </div>
+
+  <div class="skills">
+    <h4>Atouts</h4>
+    <ul>
+      <li>Sociable</li>
+      <li>Esprit d'équipe</li>
+      <li>Sens de l'organisation</li>
+      <li>Un autre atout (utilisez votre personnalité pour le mettre en avant)</li>
+    </ul>
+  </div>
+
+  <div class="interests">
+    <h4>Centres d'intérêt</h4>
+    <ul>
+      <li>Sport</li>
+      <li>Jeux vidéo</li>
+      <li>Musique</li>
+    </ul>
   </div>
 </div>
 
+<!-- MAIN CONTENT -->
+<div id="main-content" class="container-fluid">
+  
+  <!-- HERO -->
+  <section class="hero mb-5">
+    <div>
+      <h1>Mohamed Aly Niakh</h1>
+      <p class="typing">Étudiant BTS SIO – Option SISR</p>
+      <p class="mt-3">Futur Administrateur Systèmes & Réseaux</p>
+    </div>
+  </section>
+
+  <!-- COMPETENCES -->
+  <section id="competences" class="section">
+    <div class="section-title">
+      <h2>Compétences</h2>
+    </div>
+
+    <div class="glass">
+      <p><strong>Adressages réseaux IPv4 et IPv6</strong> – Modèles en couches (OSI et TCP/IP)</p>
+      <p><strong>Fonctionnement côté client de protocoles réseaux de base</strong> (DHCP et DNS)</p>
+      <p><strong>Systèmes d'exploitation :</strong> GNU/Linux (debian server / ubuntu desktop)</p>
+      <p><strong>HP et CISCO</strong></p>
+      <p><strong>Routage statique</strong></p>
+    </div>
+  </section>
+
+  <!-- FORMATIONS -->
+  <section id="formations" class="section">
+    <div class="section-title">
+      <h2>Diplômes et Formations</h2>
+    </div>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent border-secondary">
+        <strong>BTS SIO</strong><br />
+        <small>Depuis septembre 2025</small><br />
+        <a href="https://lycee-leonard-de-vinci-melun.fr" target="_blank" class="link-info">
+          Lycée Polyvalent Leonard de Vinci – Melun
+        </a>
+      </li>
+      <li class="list-group-item bg-transparent border-secondary">
+        <strong>Bac pro Modalisation et prototypage 3D</strong><br />
+        <small>De 2024 à 2025</small><br />
+        <a href="https://lycee-frédéric-joliot-curie.fr" target="_blank" class="link-info">
+          Lycée polyvalent Frédéric Joliot Curie – Dammarie-les-Lys
+        </a>
+      </li>
+      <li class="list-group-item bg-transparent border-secondary">
+        <strong>Certification PIX</strong><br />
+        <small>De 2024 à 2025</small><br />
+        <a href="https://lycee-frédéric-joliot-curie.fr" target="_blank" class="link-info">
+          Lycée Polyvalent Frédéric Joliot Curie – Dammarie-les-Lys
+        </a>
+      </li>
+      <li class="list-group-item bg-transparent border-secondary">
+        <strong>Brevet des collèges</strong><br />
+        <small>De 2021 à 2022</small><br />
+        <a href="https://college-jacques-amyot.fr" target="_blank" class="link-info">
+          Collège Jacques Amyot – Melun
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section id="experiences" class="section">
+    <div class="section-title">
+      <h2>Expériences professionnelles</h2>
+    </div>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent border-secondary">
+        <strong>Stagiaire</strong><br />
+        <small>De 2024 à 2025</small><br />
+        <a href="https://www.leduc-sa.fr" target="_blank" class="link-info">Leduc SA – Melun</a>
+      </li>
+      <li class="list-group-item bg-transparent border-secondary">
+        <strong>Stagiaire</strong><br />
+        <small>De 2023 à 2024</small><br />
+        <a href="https://www.quickhabitat.fr" target="_blank" class="link-info">Quick habitat – Melun</a>
+      </li>
+      <li class="list-group-item bg-transparent border-secondary">
+        <strong>Stagiaire</strong><br />
+        <small>De 2022 à 2023</small><br />
+        <a href="https://www.leduc-sa.fr" target="_blank" class="link-info">Leduc SA – Melun</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="cv-section">
+    <h2>Mon CV</h2>
+    <p>Téléchargez mon CV professionnel en cliquant ci-dessous</p>
+    <a href="assets/cv/Mohamed_Aly_Niakh_CV.pdf" target="_blank" class="cv-btn">
+      <i class="bi bi-download"></i> Télécharger mon CV
+    </a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section text-center">
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+    <p><i class="bi bi-envelope"></i> niakhmoha07@gmail.com</p>
+    <p><i class="bi bi-telephone"></i> 06 22 18 36 05</p>
+    <p><i class="bi bi-geo-alt"></i> 8 square Francois Couperin, 77000 Melun, Île-de-France</p>
+  </section>
+</div>
+
+<footer>
+  © 2026 Mohamed Aly Niakh – Portfolio Professionnel SISR
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
